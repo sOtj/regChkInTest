@@ -14,7 +14,7 @@ else if (day === 6 && hour >= 12 && (hour < 13 || (hour === 13 && minute <= 40))
 }
 
 // Example check for Day 1, Afternoon Session
-else if (day === 6 && hour >= 13 && (hour < 16 || (hour === 21 && minute <= 30))) {
+else if (day === 6 && hour >= 13 && (hour < 16 || (hour === 23 && minute <= 30))) {
     window.location.href = "https://forms.gle/Hv2txRmBex2n1epq6";
 }
 
