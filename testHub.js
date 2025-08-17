@@ -4,17 +4,17 @@ var hour = now.getHours();
 var minute = now.getMinutes();
 
 // Example check for Day 1, Morning Session
-if (day === 6 && hour >= 7 && (hour < 12 || (hour === 12 && minute <= 30))) {
+if (day === 0 && hour >= 7 && (hour < 12 || (hour === 12 && minute <= 30))) {
     window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc8p7-fBft7Hgfz9zgtlsnwQSYxxo-8cj2PVzsiCd3FvW2NWA/viewform?usp=dialog";
 }
 
 // Example check for Day 1, Lunch
-else if (day === 6 && hour >= 12 && (hour < 13 || (hour === 13 && minute <= 40))) {
+else if (day === 0 && hour >= 12 && (hour < 13 || (hour === 13 && minute <= 40))) {
     window.location.href = "https://forms.gle/dyePjFWjNNzi3kf59";
 }
 
 // Example check for Day 1, Afternoon Session
-else if (day === 6 && hour >= 13 && (hour < 16 || (hour === 23 && minute <= 30))) {
+else if (day === 0 && hour >= 13 && (hour < 16 || (hour === 23 && minute <= 30))) {
     window.location.href = "https://forms.gle/Hv2txRmBex2n1epq6";
 }
 
