@@ -24,57 +24,57 @@ const l3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdm29mh-ifaa27syBBkuhP0K
 const a3URL = "https://docs.google.com/forms/d/e/1FAIpQLSfN_etCDMk9je5nH3Y7slWPd5wYPyfVfBPyVT8Gvr4oJ8kJ3A/viewform?usp=pp_url&entry.699051532=";
 
 function runProcedureBasedOnTime() {
-  const now = new Date();
-  const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+    const now = new Date();
+    const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
 
-  // Extract current hours and minutes
-  const currentMinutes = now.getHours() * 60 + now.getMinutes();
+    // Extract current hours and minutes
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
-  // Define time ranges in minutes since midnight
-  const timeAStart = 0 * 60 + 30;   // 07:30 00:30 FOR TEST
-  const timeAEnd   = 12 * 60 + 30;  // 12:30
+    // Define time ranges in minutes since midnight
+    const timeAStart = 0 * 60 + 30;     // 07:30 00:30 FOR TEST
+    const timeAEnd = 12 * 60 + 30;      // 12:30
 
-  const timeBStart = 12 * 60 + 40;  // 12:40
-  const timeBEnd   = 13 * 60 + 40;  // 13:40
+    const timeBStart = 12 * 60 + 40;    // 12:40
+    const timeBEnd  = 13 * 60 + 40;     // 13:40
 
-  const timeCStart = 13 * 60 + 50;  // 13:50
-  const timeCEnd   = 16 * 60 + 50;  // 16:50
+    const timeCStart = 13 * 60 + 50;    // 13:50
+    const timeCEnd  = 16 * 60 + 50;     // 16:50
 
-  // Check which time range the current time falls into
-  // **CRITICAL FIX**: Replaced single = with triple === for comparison.
-  if(currentDay === 1){   // MONDAY FOR TEST
-    if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
-        window.location.href = m1URL + attendeeId;
-    } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
-        window.location.href = l1URL + attendeeId;
-    } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
-        window.location.href = a1URL + attendeeId;
-    } else {
-        console.log("No procedure scheduled at this time.");
-    } 
-  }else if(currentDay === 3){    // Wednesday
-    if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
-        window.location.href = m2URL + attendeeId;
-    } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
-        window.location.href = l2URL + attendeeId;
-    } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
-        window.location.href = a2URL + attendeeId;
-    } else {
-        console.log("No procedure scheduled at this time.");
-    } 
-  }else if(currentDay === 4){    // Thursday
-    if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
-        window.location.href = m3URL + attendeeId;
-    } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
-        window.location.href = l3URL + attendeeId;
-    } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
-        window.location.href = a3URL + attendeeId;
-    } else {
-        console.log("No procedure scheduled at this time.");
-    }
-  }else {
-     console.log("No procedure scheduled at this time.");
-  }
+    // Check which time range the current time falls into
+    // **CRITICAL FIX**: Replaced single = with triple === for comparison.
+    if(currentDay === 1){           // MONDAY FOR TEST
+        if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
+            window.location.href = m1URL + attendeeId;
+        } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
+            window.location.href = l1URL + attendeeId;
+        } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
+            window.location.href = a1URL + attendeeId;
+        } else {
+            console.log("No procedure scheduled at this time.");
+        } 
+    }else if(currentDay === 3){     // Wednesday
+        if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
+            window.location.href = m2URL + attendeeId;
+        } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
+            window.location.href = l2URL + attendeeId;
+        } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
+            window.location.href = a2URL + attendeeId;
+        } else {
+            console.log("No procedure scheduled at this time.");
+        } 
+    }else if(currentDay === 4){     // Thursday
+        if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
+            window.location.href = m3URL + attendeeId;
+        } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
+            window.location.href = l3URL + attendeeId;
+        } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
+            window.location.href = a3URL + attendeeId;
+        } else {
+            console.log("No procedure scheduled at this time.");
+        }
+    }else {
+        console.log("No procedure scheduled at this time.");
+    }
 }
 
 // **CALL THE FUNCTION TO START THE PROCESS**
