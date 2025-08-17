@@ -11,15 +11,22 @@ var attendeeId = getUrlParameter('id');
 
 // Put the unique URL for each form here, WITH the entry ID.
 // NOTE: These URLs do NOT have the attendee ID at the end yet.
-const morningSessionURL = "https://docs.google.com/forms/d/e/1FAIpQLSc8p7-fBft7Hgfz9zgtlsnwQSYxxo-8cj2PVzsiCd3FvW2NWA/viewform?usp=pp_url&entry.699051532=";
-const lunchURL = "https://docs.google.com/forms/d/e/1FAIpQLScslhmYnxFJV_Of7ieSWtslyzD197P5C5FTTWcSUR6vjrFsvg/viewform?usp=pp_url&entry.699051532=";
-const afternoonSessionURL = "https://docs.google.com/forms/d/e/1FAIpQLSeuEU7vXW7QA6hfxh6zDD5orGfGap5TMF4T2qBcs5dfDRqtmA/viewform?usp=pp_url&entry.699051532=";
+const m1URL = "https://docs.google.com/forms/d/e/1FAIpQLSc8p7-fBft7Hgfz9zgtlsnwQSYxxo-8cj2PVzsiCd3FvW2NWA/viewform?usp=pp_url&entry.699051532=";
+const l1URL = "https://docs.google.com/forms/d/e/1FAIpQLScslhmYnxFJV_Of7ieSWtslyzD197P5C5FTTWcSUR6vjrFsvg/viewform?usp=pp_url&entry.699051532=";
+const a1URL = "https://docs.google.com/forms/d/e/1FAIpQLSeuEU7vXW7QA6hfxh6zDD5orGfGap5TMF4T2qBcs5dfDRqtmA/viewform?usp=pp_url&entry.699051532=";
+const m2URL = "https://docs.google.com/forms/d/e/1FAIpQLSc8p7-fBft7Hgfz9zgtlsnwQSYxxo-8cj2PVzsiCd3FvW2NWA/viewform?usp=pp_url&entry.699051532=";
+const l2URL = "https://docs.google.com/forms/d/e/1FAIpQLScslhmYnxFJV_Of7ieSWtslyzD197P5C5FTTWcSUR6vjrFsvg/viewform?usp=pp_url&entry.699051532=";
+const a2URL = "https://docs.google.com/forms/d/e/1FAIpQLSeuEU7vXW7QA6hfxh6zDD5orGfGap5TMF4T2qBcs5dfDRqtmA/viewform?usp=pp_url&entry.699051532=";
+const m3URL = "https://docs.google.com/forms/d/e/1FAIpQLSc8p7-fBft7Hgfz9zgtlsnwQSYxxo-8cj2PVzsiCd3FvW2NWA/viewform?usp=pp_url&entry.699051532=";
+const l3URL = "https://docs.google.com/forms/d/e/1FAIpQLScslhmYnxFJV_Of7ieSWtslyzD197P5C5FTTWcSUR6vjrFsvg/viewform?usp=pp_url&entry.699051532=";
+const a3URL = "https://docs.google.com/forms/d/e/1FAIpQLSeuEU7vXW7QA6hfxh6zDD5orGfGap5TMF4T2qBcs5dfDRqtmA/viewform?usp=pp_url&entry.699051532=";
 
 
 
 
 function runProcedureBasedOnTime() {
   const now = new Date();
+  const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
 
   // Extract current hours and minutes
   const currentMinutes = now.getHours() * 60 + now.getMinutes();
@@ -32,16 +39,41 @@ function runProcedureBasedOnTime() {
   const timeBEnd   = 13 * 60 + 40;  // 13:40
 
   const timeCStart = 13 * 60 + 50;  // 13:50
-  const timeCEnd   = 18 * 60 + 50;  // 16:50
+  const timeCEnd   = 23 * 60 + 50;  // 16:50
 
   // Check which time range the current time falls into
-  if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
-    window.location.href = morningSessionURL + attendeeId;
-  } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
-    window.location.href = lunchURL + attendeeId;
-  } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
-    window.location.href = afternoonSessionURL + attendeeId;
-  } else {
-    console.log("No procedure scheduled at this time.");
+  if(currentDay = 2){   // Tue, day 1
+    if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
+        window.location.href = m1URL + attendeeId;
+    } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
+        window.location.href = l1URL + attendeeId;
+    } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
+        window.location.href = a1URL + attendeeId;
+    } else {
+        console.log("No procedure scheduled at this time.");
+    } 
+  }else if(currentDay = 3){    // Wed, day 2
+    if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
+        window.location.href = m2URL + attendeeId;
+    } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
+        window.location.href = l2URL + attendeeId;
+    } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
+        window.location.href = a2URL + attendeeId;
+    } else {
+        console.log("No procedure scheduled at this time.");
+    } 
+  }else if(currentDay = 4){    // Thu, day 3
+    if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
+        window.location.href = m3URL + attendeeId;
+    } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
+        window.location.href = l3URL + attendeeId;
+    } else if (currentMinutes >= timeCStart && currentMinutes <= timeCEnd) {
+        window.location.href = a3URL + attendeeId;
+    } else {
+        console.log("No procedure scheduled at this time.");
+    }
+  }else {
+    // console.log("No procedure scheduled at this time.");
+    window.location.href = a3URL + attendeeId;
   }
 }
