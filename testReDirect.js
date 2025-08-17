@@ -42,7 +42,7 @@ function runProcedureBasedOnTime() {
   const timeCEnd   = 23 * 60 + 50;  // 16:50
 
   // Check which time range the current time falls into
-  if(currentDay = 2){   // Tue, day 1
+  if(currentDay = 0){   // Tue, day 1
     if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
         window.location.href = m1URL + attendeeId;
     } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
@@ -73,7 +73,7 @@ function runProcedureBasedOnTime() {
         console.log("No procedure scheduled at this time.");
     }
   }else {
-    // console.log("No procedure scheduled at this time.");
-    window.location.href = a3URL + attendeeId;
+     console.log("No procedure scheduled at this time.");
+   //window.location.href = a3URL + attendeeId;
   }
 }
