@@ -1,3 +1,9 @@
+debugger; // The debugger will stop here.
+var now = new Date();
+var day = now.getDay();
+// ... the rest of your script
+
+
 // A simple function to get URL parameters.
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -21,9 +27,6 @@ const m3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdbBwKqiakiOYoGVa4WD9KUQ
 const l3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdm29mh-ifaa27syBBkuhP0Kw0lSi_g-_NyK01gmfKEegb4FQ/viewform?usp=pp_url&entry.699051532=";
 const a3URL = "https://docs.google.com/forms/d/e/1FAIpQLSfN_etCDMk9je5nH3Y7slWPd5wYPyfVfBPyVT8Gvr4oJ8kJ3A/viewform?usp=pp_url&entry.699051532=";
 
-
-
-
 function runProcedureBasedOnTime() {
   const now = new Date();
   const currentDay = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
@@ -42,7 +45,7 @@ function runProcedureBasedOnTime() {
   const timeCEnd   = 23 * 60 + 50;  // 16:50
 
   // Check which time range the current time falls into
-  if(currentDay = 0){   // Tue, day 1
+  if(currentDay = 0){   // Tue, day 1 SUNDAY FOR TEST
     if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
         window.location.href = m1URL + attendeeId;
     } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
