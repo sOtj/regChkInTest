@@ -32,17 +32,17 @@ function runProcedureBasedOnTime() {
 
     // Define time ranges in minutes since midnight
     const timeAStart = 7 * 60 + 30;     // 07:30
-    const timeAEnd = 22 * 60 + 30;      // 12:30
+    const timeAEnd = 12 * 60 + 30;      // 12:30
 
-    const timeBStart = 22 * 60 + 40;    // 12:40
-    const timeBEnd  = 22 * 60 + 45;     // 13:40
+    const timeBStart = 12 * 60 + 40;    // 12:40
+    const timeBEnd  = 13 * 60 + 45;     // 13:40
 
-    const timeCStart = 22 * 60 + 50;    // 13:50
-    const timeCEnd  = 22 * 60 + 55;     // 16:50  ***22:50 FOR TEST***
+    const timeCStart = 13 * 60 + 50;    // 13:50
+    const timeCEnd  = 16 * 60 + 55;     // 16:50  ***22:50 FOR TEST***
 
     // Check which time range the current time falls into
     // **CRITICAL FIX**: Replaced single = with triple === for comparison.
-    if(currentDay === 1){           // MONDAY FOR TEST
+    if(currentDay === 2){           // Tuesday
         if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
             window.location.href = m1URL + attendeeId;
         } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
