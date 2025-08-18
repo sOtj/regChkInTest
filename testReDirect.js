@@ -32,7 +32,7 @@ function runProcedureBasedOnTime() {
 
     // Define time ranges in minutes since midnight
     const timeAStart = 7 * 60 + 30;     // 07:30
-    const timeAEnd = 12 * 60 + 40;      // 12:30
+    const timeAEnd = 12 * 60 + 30;      // 12:30
 
     const timeBStart = 12 * 60 + 40;    // 12:40
     const timeBEnd  = 13 * 60 + 40;     // 13:40
