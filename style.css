@@ -3,3 +3,8 @@ h1 {
     font-size:36pt;
     font-family:"Arial", sans-serif;
 }
+h2 {
+    color:#666;        /* grey*/
+    font-size:24pt;
+    font-family:"Arial", sans-serif;
+}
