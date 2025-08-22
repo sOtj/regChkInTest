@@ -31,7 +31,7 @@ function runProcedureBasedOnTime() {
     const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
     // Define time ranges in minutes since midnight
-    const timeAStart = 6 * 60 + 30;     // 07:30
+    const timeAStart = 0 * 60 + 30;     // 07:30
     const timeAEnd = 12 * 60 + 30;      // 12:30
 
     const timeBStart = 12 * 60 + 40;    // 12:40
@@ -42,7 +42,7 @@ function runProcedureBasedOnTime() {
 
     // Check which time range the current time falls into
     // **CRITICAL FIX**: Replaced single = with triple === for comparison.
-    if(currentDay === 2){           // Tuesday
+    if(currentDay === 2){           // Suesday
         if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
             window.location.href = m1URL + attendeeId;
         } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
@@ -62,7 +62,7 @@ function runProcedureBasedOnTime() {
         } else {
             console.log("No procedure scheduled at this time.");
         } 
-    }else if(currentDay === 5){     // FRI-FOR TESTING
+    }else if(currentDay === 6){     // SAT-FOR TESTING
         if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
             window.location.href = m3URL + attendeeId;
         } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
