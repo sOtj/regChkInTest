@@ -38,7 +38,7 @@ function runProcedureBasedOnTime() {
     const timeBEnd  = 13 * 60 + 40;     // 13:40
 
     const timeCStart = 13 * 60 + 50;    // 13:50
-    const timeCEnd  = 16 * 60 + 50;     // 16:50
+    const timeCEnd  = 22 * 60 + 50;     // 16:50
 
     // Check which time range the current time falls into
     // **CRITICAL FIX**: Replaced single = with triple === for comparison.
@@ -62,7 +62,7 @@ function runProcedureBasedOnTime() {
         } else {
             console.log("No procedure scheduled at this time.");
         } 
-    }else if(currentDay === 4){     // Thursday
+    }else if(currentDay === 5){     // FRI-FOR TESTING
         if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
             window.location.href = m3URL + attendeeId;
         } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
