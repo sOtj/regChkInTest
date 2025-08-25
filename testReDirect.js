@@ -42,7 +42,7 @@ function runProcedureBasedOnTime() {
 
     // Check which time range the current time falls into
     // **CRITICAL FIX**: Replaced single = with triple === for comparison.
-    if(currentDay === 2){           // Suesday
+    if(currentDay === 1){           // Monday
         if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
             window.location.href = m1URL + attendeeId;
         } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
