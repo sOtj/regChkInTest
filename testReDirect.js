@@ -62,7 +62,7 @@ function runProcedureBasedOnTime() {
         } else {
             console.log("No procedure scheduled at this time.");
         } 
-    }else if(currentDay === 6){     // SAT-FOR TESTING
+    }else if(currentDay === 4){     // SAT-FOR TESTING
         if (currentMinutes >= timeAStart && currentMinutes <= timeAEnd) {
             window.location.href = m3URL + attendeeId;
         } else if (currentMinutes >= timeBStart && currentMinutes <= timeBEnd) {
