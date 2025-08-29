@@ -19,9 +19,9 @@ const a1URL = "https://docs.google.com/forms/d/e/1FAIpQLSeuEU7vXW7QA6hfxh6zDD5or
 const m2URL = "https://docs.google.com/forms/d/e/1FAIpQLScS3VBI5gnu1odA_9DTVqP_wLJj3jhGR5dk7HxOzonyB9C92Q/viewform?usp=pp_url&entry.699051532=";
 const l2URL = "https://docs.google.com/forms/d/e/1FAIpQLSdtSq8MmDqDdNjkWdwHdAE10TgG8LRX1zbE29E-V7I3SIXtjA/viewform?usp=pp_url&entry.699051532=";
 const a2URL = "https://docs.google.com/forms/d/e/1FAIpQLScwH3G0Gn8EIth5oQC7NJBjr7NzHDa9kKj-3MVO-_Ki6wMlSA/viewform?usp=pp_url&entry.699051532=";
-const m3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdbBwKqiakiOYoGVa4WD9KUQFZaI4lzi-97zy5SUGGNqrJapw/viewform?usp=pp_url&entry.699051532=";
-const l3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdm29mh-ifaa27syBBkuhP0Kw0lSi_g-_NyK01gmfKEegb4FQ/viewform?usp=pp_url&entry.699051532=";
-const a3URL = "https://docs.google.com/forms/d/e/1FAIpQLSfN_etCDMk9je5nH3Y7slWPd5wYPyfVfBPyVT8Gvr4oJ8kJ3A/viewform?usp=pp_url&entry.699051532=";
+const m3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdbBwKqiakiOYoGVa4WD9KUQFZaI4lzi-97zy5SUGGNqrJapw/formResponse?usp=pp_url&entry.699051532=";
+const l3URL = "https://docs.google.com/forms/d/e/1FAIpQLSdm29mh-ifaa27syBBkuhP0Kw0lSi_g-_NyK01gmfKEegb4FQ/formResponse?usp=pp_url&entry.699051532=";
+const a3URL = "https://docs.google.com/forms/d/e/1FAIpQLSfN_etCDMk9je5nH3Y7slWPd5wYPyfVfBPyVT8Gvr4oJ8kJ3A/formResponse?usp=pp_url&entry.699051532=";
 
 function runProcedureBasedOnTime() {
     const now = new Date();
